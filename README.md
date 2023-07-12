@@ -16,7 +16,7 @@ The initial implementation of the EnclaveVpn prototype is implemented and evalua
 * OS : Ubuntu 16.04 LTS (64-bit)
 * DPDK 18.11 [driver](./prebuilt-tools/dpdk-driver)
 * VPP 19.08 (commit [00b2d74](https://github.com/FDio/vpp/commit/00b2d74d1f58b9357e8d955ad7410fb608490904))
-* SGX SSL [intel-sgx-ssl](./intel-sgx-ssl)
+* SGX SSL [intel-sgx-ssl](https://github.com/jmpetrus/intel-sgx-ssl)
 * SGX SDK 2.6.100 ([sdk](./prebuilt-tools/sdk), [psw](./prebuilt-tools/psw))
 
 ## Directory Layout
@@ -53,6 +53,7 @@ vagrant ssh
 $ cd EncalveVpn/prebuilt-tools/sdk
 $ sudo ./sgx_linux_x64_sdk_2.6.100.51363.bin
 $ source /opt/intel/sgxsdk/environment
+```
 
 * Install SGX PSW to `/opt/intel`
 
