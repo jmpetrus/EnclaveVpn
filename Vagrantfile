@@ -1,6 +1,8 @@
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
 
+ENV["LC_ALL"] = "en_US.UTF-8"
+
 # All Vagrant configuration is done below. The "2" in Vagrant.configure
 # configures the configuration version (we support older styles for
 # backwards compatibility). Please don't change it unless you know what
@@ -13,6 +15,10 @@ Vagrant.configure("2") do |config|
   # Every Vagrant development environment requires a box. You can search for
   # boxes at https://vagrantcloud.com/search.
   config.vm.box = "ubuntu/xenial64"
+
+  if Vagrant.has_plugin?("vagrant-timezone")
+    config.timezone.value = "Asia/Seoul"
+  end
 
   # Disable automatic box update checking. If you disable this, then
   # boxes will only be checked for updates when the user runs
@@ -59,4 +65,12 @@ Vagrant.configure("2") do |config|
   #
   # View the documentation for the provider you are using for more
   # information on available options.
+
+  # Update repositories
+  config.vm.provision :shell, inline: "sudo apt update -y"
+
+  # Add dependencies
+  config.vm.provision :shell, inline: "sudo apt install -y build-essential"
+  config.vm.provision :shell, inline: "sudo apt install -y libcurl3 libprotobuf9v5"
+
 end
