@@ -34,6 +34,7 @@ The initial implementation of the EnclaveVpn prototype is implemented and evalua
 | Vagrantfile                       | Development configuration for EnclaveVpn                       |
 
 ## How to build EnclaveVpn
+* Clone the repository with `--recurse-submodules`
 
 * Run Vagrant for Ubuntu 16.04 LTS (xenial) with VirtualBox
 
@@ -59,7 +60,9 @@ $ source /opt/intel/sgxsdk/environment
 
 ```sh
 $ cd EncalveVpn/prebuilt-tools/psw
-$ sudo dpkg -i *.deb
+$ sudo dpkg -i libsgx-enclave-common_2.6.100.51363-xenial1_amd64.deb
+$ sudo dpkg -i libsgx-enclave-common-dev_2.6.100.51363-xenial1_amd64.deb
+$ sudo dpkg -i libsgx-urts_2.6.100.51363-xenial1_amd64.deb
 ```
 
 * Build and Install SGX SSL to `/opt/intel`
