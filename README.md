@@ -5,7 +5,7 @@ EnclaveVpn
 
 EnclaveVpn is an SGX-based Cloud VPN that supports a security-enhanced IPsec gateway using Intel SGX with optimized EPC utilization and practical performance of the data plane.
 
-For technical details, please check our [paper](), "EnclaveVpn: Toward Optimized Utilization of Enclave Page Cache and Practical Performance of Data Plane for Security-Enhanced Cloud VPN" to be appeared at RAID 2023.
+For technical details, please check our [paper](https://dl.acm.org/doi/10.1145/3607199.3607210), "EnclaveVPN: Toward Optimized Utilization of Enclave Page Cache and Practical Performance of Data Plane for Security-Enhanced Cloud VPN" to be appeared at RAID 2023.
 
 
 ## Experimental Setup
